@@ -118,6 +118,7 @@ export default function ProductDetail() {
                     ar-placement={product.arPlacement || 'floor'}
                     camera-controls
                     touch-action="pan-y"
+                   orientation="0deg 0deg 0deg"
                     shadow-intensity="1"
                     auto-rotate
                     className="w-full h-[420px] bg-slate-100"
