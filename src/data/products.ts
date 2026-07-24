@@ -71,7 +71,7 @@ export const products: Product[] = [
     name: 'Acoustic Slat Architectural Wall Panel',
     sku: 'EOS-AP-8830',
     price: '$120.00',
-    arPlacement: true,
+    arPlacement: 'wall',
     priceValue: 120.0,
     category: 'Wall Systems & Acoustics',
     description:
