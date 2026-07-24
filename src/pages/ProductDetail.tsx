@@ -109,11 +109,13 @@ export default function ProductDetail() {
                 </div>
               ) : (
                 <div>
-                  <model-viewer
+                 <model-viewer
                     src={product.glbModel}
                     ios-src={product.usdzModel}
                     ar
                     ar-modes="webxr scene-viewer quick-look"
+                    ar-scale="fixed"
+                    ar-placement={product.sku === 'EOS-AP-8830' ? 'wall' : 'floor'}
                     camera-controls
                     touch-action="pan-y"
                     shadow-intensity="1"
@@ -121,10 +123,10 @@ export default function ProductDetail() {
                     className="w-full h-[420px] bg-slate-100"
                     style={{ width: '100%', height: '420px' }}
                   >
-                    <div slot="poster" className="w-full h-full flex items-center justify-center text-slate-400 text-sm">
-                      Loading spatial model…
-                    </div>
-                  </model-viewer>
+  <div slot="poster" className="w-full h-full flex items-center justify-center text-slate-400 text-sm">
+    Loading spatial model…
+  </div>
+</model-viewer>
                   <p className="px-4 py-3 text-xs text-slate-500 border-t border-slate-100">
                     Interactive 3D spatial view. Drag to rotate; pinch to zoom. On supported mobile devices, tap below to launch AR.
                   </p>
