@@ -51,9 +51,9 @@ export const products: Product[] = [
     description:
       'Low-maintenance indoor botanical specimen housed in a sealed matte-finish ceramic vessel.',
     thumbnail:
-      'https://raw.githubusercontent.com/mohammedkhal/DimensionX/main/plant.jpeg',
-    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/DimensionX/main/planrt.glb',
-    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/DimensionX/main/planrt.usdz',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/plant.jpeg',
+    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/planrt.glb',
+    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/planrt.usdz',
     specs: [
       { label: 'Vessel Dimensions', value: '6.0" dia. x 7.0" H' },
       { label: 'Overall Height (with foliage)', value: '14.0" H' },
@@ -75,9 +75,9 @@ export const products: Product[] = [
     category: 'Wall Systems & Acoustics',
     description:
       'Commercial-grade acoustic timber panel designed for sound attenuation in conference rooms and private offices.',
-    thumbnail: '/models/wall_panel.jpeg',
-    glbModel: '/models/wall_panel.glb',
-    usdzModel: '/models/wall-panel.usdz',
+    thumbnail: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2.jpeg',
+    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2.glb',
+    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall-panel_2.usdz',
     specs: [
       { label: 'Panel Dimensions', value: '94.5" W x 47.25" H x 1.5" D' },
       { label: 'Coverage Area', value: '31.0 sq. ft. per panel' },
