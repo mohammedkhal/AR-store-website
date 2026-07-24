@@ -114,11 +114,10 @@ export default function ProductDetail() {
                     // ios-src={product.usdzModel}
                     ar
                     ar-modes="webxr scene-viewer quick-look"
-                    ar-scale="fixed"
-                    ar-placement={product.arPlacement || 'floor'}
+                    ar-scale="auto"
+                    ar-placement= 'floor'
                     camera-controls
                     touch-action="pan-y"
-                   orientation="0deg 0deg 0deg"
                     shadow-intensity="1"
                     auto-rotate
                     className="w-full h-[420px] bg-slate-100"
