@@ -26,8 +26,8 @@ export const products: Product[] = [
     description:
       'High-grade leather manager chair engineered for long-duration posture correction and lumbar support.',
     thumbnail:
-      'https://raw.githubusercontent.com/mohammedkhal/DimensionX/main/office_chair.jpeg',
-    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/DimensionX/main/office_chair.glb',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/office_chair.jpeg',
+    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/office_chair.glb',
     usdzModel: '/models/gaming-chair.usdz',
     specs: [
       { label: 'Overall Dimensions', value: '29.5" W x 30.5" D x 45.25" H' },
