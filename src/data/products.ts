@@ -76,7 +76,7 @@ export const products: Product[] = [
     description:
       'Commercial-grade acoustic timber panel designed for sound attenuation in conference rooms and private offices.',
     thumbnail: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2.jpeg',
-    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_4.glb',
+    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_5.glb',
     usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall-panel_3.usdz',
     specs: [
       { label: 'Panel Dimensions', value: '94.5" W x 47.25" H x 1.5" D' },
