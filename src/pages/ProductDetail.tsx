@@ -111,7 +111,7 @@ export default function ProductDetail() {
                 <div>
                  <model-viewer
                     src={product.glbModel}
-                    ios-src={product.usdzModel}
+                    // ios-src={product.usdzModel}
                     ar
                     ar-modes="webxr scene-viewer quick-look"
                     ar-scale="fixed"
