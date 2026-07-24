@@ -114,7 +114,7 @@ export default function ProductDetail() {
                     ios-src={product.usdzModel}
                     ar
                     ar-modes="webxr scene-viewer quick-look"
-                    ar-scale="fixed"
+                    ar-scale="auto"
                     camera-controls
                     touch-action="pan-y"
                     shadow-intensity="1"
