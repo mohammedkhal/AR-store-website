@@ -115,7 +115,6 @@ export default function ProductDetail() {
                     ar
                     ar-modes="webxr scene-viewer quick-look"
                     ar-scale="fixed"
-                    ar-placement={product.sku === 'EOS-AP-8830' ? 'wall' : 'floor'}
                     camera-controls
                     touch-action="pan-y"
                     shadow-intensity="1"
