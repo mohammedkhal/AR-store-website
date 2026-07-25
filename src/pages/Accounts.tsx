@@ -15,13 +15,13 @@ export default function Accounts() {
           { icon: FileText, title: 'Custom Catalogs', body: 'Pre-approved product lists and SKU restrictions tailored to your organization.' },
         ].map((c) => (
           <div key={c.title} className="border border-slate-200 rounded-sm bg-white p-6">
-            <c.icon className="w-8 h-8 text-amber-600 mb-4" />
+            <c.icon className="w-8 h-8 text-sky-600 mb-4" />
             <h2 className="font-serif text-lg font-bold text-slate-900">{c.title}</h2>
             <p className="mt-2 text-sm text-slate-600 leading-relaxed">{c.body}</p>
           </div>
         ))}
       </div>
-      <Link to="/" className="mt-8 inline-block text-amber-700 hover:underline">← Back to Catalog</Link>
+      <Link to="/" className="mt-8 inline-block text-sky-700 hover:underline">← Back to Catalog</Link>
     </div>
   );
 }

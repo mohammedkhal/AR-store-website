@@ -11,7 +11,7 @@ export default function Cart() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h1 className="font-serif text-2xl font-bold text-slate-900">Purchase Order is Empty</h1>
         <p className="mt-2 text-slate-600">No items have been added to your current purchase order.</p>
-        <Link to="/" className="mt-4 inline-flex items-center gap-2 text-amber-700 hover:underline">
+        <Link to="/" className="mt-4 inline-flex items-center gap-2 text-sky-700 hover:underline">
           <ArrowLeft className="w-4 h-4" /> Return to Catalog
         </Link>
       </div>
@@ -41,7 +41,7 @@ export default function Cart() {
                       <div className="flex items-center gap-3">
                         <img src={i.product.thumbnail} alt={i.product.name} className="w-12 h-12 object-cover rounded-sm border border-slate-200" />
                         <div>
-                          <Link to={`/product/${i.product.id}`} className="font-semibold text-slate-900 hover:text-amber-700">{i.product.name}</Link>
+                          <Link to={`/product/${i.product.id}`} className="font-semibold text-slate-900 hover:text-sky-700">{i.product.name}</Link>
                           <p className="font-mono text-xs text-slate-500">{i.product.sku}</p>
                         </div>
                       </div>
@@ -63,7 +63,7 @@ export default function Cart() {
               </tbody>
             </table>
           </div>
-          <Link to="/" className="mt-4 inline-flex items-center gap-2 text-sm text-amber-700 hover:underline">
+          <Link to="/" className="mt-4 inline-flex items-center gap-2 text-sm text-sky-700 hover:underline">
             <ArrowLeft className="w-4 h-4" /> Continue Browsing Catalog
           </Link>
         </div>
@@ -80,7 +80,7 @@ export default function Cart() {
               <span className="font-bold text-slate-900">Estimated Total</span>
               <span className="font-bold text-slate-900">${subtotal.toFixed(2)}</span>
             </div>
-            <button className="mt-5 w-full bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold text-sm px-6 py-3 rounded-sm transition-colors">
+            <button className="mt-5 w-full bg-sky-500 hover:bg-sky-400 text-white font-semibold text-sm px-6 py-3 rounded-sm transition-colors">
               Request Purchase Order Quote
             </button>
             <p className="mt-3 flex items-center gap-1.5 text-xs text-slate-500">
