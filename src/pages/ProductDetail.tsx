@@ -248,25 +248,6 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      <div className="fixed bottom-4 left-1/2 z-30 w-[min(calc(100%-2rem),72rem)] -translate-x-1/2 rounded-[2rem] border border-white/70 bg-white/90 backdrop-blur-xl shadow-2xl px-5 py-4">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-4">
-            <img src={mainImage || product.thumbnail} alt={product.name} className="w-16 h-16 rounded-3xl object-cover border border-zinc-200" />
-            <div>
-              <p className="text-sm text-slate-500 uppercase tracking-[0.2em]">Quick action</p>
-              <p className="font-semibold text-slate-950">{product.name}</p>
-              <p className="text-sm text-slate-600">{product.price} / unit</p>
-            </div>
-          </div>
-
-          <button
-            onClick={handleAdd}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm px-6 py-3 shadow-sm transition"
-          >
-            Quick Add
-          </button>
-        </div>
-      </div>
     </div>
   );
 }
