@@ -30,8 +30,8 @@ export const products: Product[] = [
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/office_chair.jpeg',
     images: [
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/office_chair.jpeg',
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/chair_side_1.jpeg',
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/chair_side_2.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/chairs_side_1.png',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/chair_side_2.png',
     ],
     glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/office_chair.glb',
     usdzModel: '/models/gaming-chair.usdz',
@@ -57,13 +57,13 @@ export const products: Product[] = [
     description:
       'Low-maintenance indoor botanical specimen housed in a sealed matte-finish ceramic vessel.',
     thumbnail:
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/plant.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
     images: [
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/plant.jpeg',
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/planrt_detail1.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
     ],
-    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/planrt.glb',
-    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/planrt.usdz',
+    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/planrt.glb',
+    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/planrt.usdz',
     specs: [
       { label: 'Vessel Dimensions', value: '6.0" dia. x 7.0" H' },
       { label: 'Overall Height (with foliage)', value: '14.0" H' },
@@ -85,13 +85,13 @@ export const products: Product[] = [
     category: 'Wall Systems & Acoustics',
     description:
       'Commercial-grade acoustic timber panel designed for sound attenuation in conference rooms and private offices.',
-    thumbnail: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2.jpeg',
+    thumbnail: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.jpeg',
     images: [
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2.jpeg',
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2_detail1.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2_detail1.jpeg',
     ],
-    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2.glb',
-    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall-panel_2.usdz',
+    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.glb',
+    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall-panel_2.usdz',
     specs: [
       { label: 'Panel Dimensions', value: '94.5" W x 47.25" H x 1.5" D' },
       { label: 'Coverage Area', value: '31.0 sq. ft. per panel' },
