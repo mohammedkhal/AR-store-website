@@ -7,6 +7,7 @@ export interface Product {
   category: string;
   description: string;
   thumbnail: string;
+  images?: string[];
   glbModel: string;
   usdzModel: string;
   specs: {
@@ -27,6 +28,11 @@ export const products: Product[] = [
       'High-grade leather manager chair engineered for long-duration posture correction and lumbar support.',
     thumbnail:
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/office_chair.jpeg',
+    images: [
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/office_chair.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/office_chair_detail1.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/office_chair_detail2.jpeg',
+    ],
     glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/office_chair.glb',
     usdzModel: '/models/gaming-chair.usdz',
     specs: [
@@ -52,6 +58,10 @@ export const products: Product[] = [
       'Low-maintenance indoor botanical specimen housed in a sealed matte-finish ceramic vessel.',
     thumbnail:
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/plant.jpeg',
+    images: [
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/plant.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/planrt_detail1.jpeg',
+    ],
     glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/planrt.glb',
     usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/planrt.usdz',
     specs: [
@@ -76,6 +86,10 @@ export const products: Product[] = [
     description:
       'Commercial-grade acoustic timber panel designed for sound attenuation in conference rooms and private offices.',
     thumbnail: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2.jpeg',
+    images: [
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2.jpeg',
+      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2_detail1.jpeg',
+    ],
     glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall_panel_2.glb',
     usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/wall-panel_2.usdz',
     specs: [

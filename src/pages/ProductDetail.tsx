@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getProductById } from '@/data/products';
 import { useCart } from '@/context/CartContext';
@@ -39,6 +39,7 @@ export default function ProductDetail() {
   const [qty, setQty] = useState(1);
   const [tab, setTab] = useState<'photos' | 'spatial'>('photos');
   const [added, setAdded] = useState(false);
+  const [mainImage, setMainImage] = useState<string>('');
 
   if (!product) {
     return (
@@ -49,6 +50,13 @@ export default function ProductDetail() {
       </div>
     );
   }
+
+  useEffect(() => {
+    if (product) {
+      const imgs = product.images && product.images.length ? product.images : [product.thumbnail];
+      setMainImage(imgs[0]);
+    }
+  }, [product]);
 
   function handleAdd() {
     if (!product) return;
@@ -102,7 +110,26 @@ export default function ProductDetail() {
             <div className="bg-white border border-slate-200 rounded-sm overflow-hidden">
               {tab === 'photos' ? (
                 <div>
-                  <img src={product.thumbnail} alt={product.name} className="w-full h-[420px] object-cover" />
+                  <div className="w-full h-[420px] bg-slate-100 flex items-center justify-center overflow-hidden">
+                    {mainImage ? (
+                      <img src={mainImage} alt={product.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="text-slate-400">Loading image…</div>
+                    )}
+                  </div>
+
+                  <div className="mt-3 px-4 flex gap-2 overflow-x-auto">
+                    {(product.images && product.images.length ? product.images : [product.thumbnail]).map((img) => (
+                      <button
+                        key={img}
+                        onClick={() => setMainImage(img)}
+                        className={`flex-shrink-0 w-20 h-14 border rounded-sm overflow-hidden ${mainImage === img ? 'ring-2 ring-amber-400' : 'border-slate-200'}`}
+                      >
+                        <img src={img} alt={`${product.name} thumbnail`} className="w-full h-full object-cover" />
+                      </button>
+                    ))}
+                  </div>
+
                   <p className="px-4 py-3 text-xs text-slate-500 border-t border-slate-100">
                     Reference photography — production units may vary by finish and lot.
                   </p>
