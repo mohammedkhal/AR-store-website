@@ -58,6 +58,15 @@ export default function ProductDetail() {
     }
   }, [product]);
 
+  // Ensure the page starts at the top when opening a product detail
+  useEffect(() => {
+    try {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    } catch (e) {
+      // ignore in non-browser environments
+    }
+  }, [id]);
+
   function handleAdd() {
     if (!product) return;
     add(product, qty);
