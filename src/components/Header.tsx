@@ -21,7 +21,7 @@ export default function Header() {
           <span className="tracking-wide uppercase">Enterprise Inquiries</span>
           <div className="flex items-center gap-x-6 gap-y-1 flex-wrap">
             <a href="tel:8005550199" className="flex items-center gap-1.5 hover:text-white transition-colors">
-              <Phone className="w-3.5 h-3.5" /> Call (800) 555-0199
+              <Phone className="w-3.5 h-3.5" /> Call (962) 791450338
             </a>
             <a href="#quote" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <FileText className="w-3.5 h-3.5" /> Request B2B Quote
@@ -36,7 +36,7 @@ export default function Header() {
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <Building2 className="w-8 h-8 text-amber-500" />
             <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight leading-tight">
-              EXECUTIVE OFFICE SUPPLY CO.
+              Tamimi OFFICE SUPPLY CO.
             </span>
           </Link>
 
