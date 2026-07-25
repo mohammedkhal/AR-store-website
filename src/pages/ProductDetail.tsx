@@ -111,11 +111,10 @@ export default function ProductDetail() {
                 <div>
                  <model-viewer
                     src={product.glbModel}
-                    // ios-src={product.usdzModel}
+                    ios-src={product.usdzModel}
                     ar
                     ar-modes="webxr scene-viewer quick-look"
                     ar-scale="auto"
-                    ar-placement= 'floor'
                     camera-controls
                     touch-action="pan-y"
                     shadow-intensity="1"
