@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   sku: string;
   price: string;
+  placement: string;
   priceValue: number;
   category: string;
   description: string;
@@ -22,6 +23,7 @@ export const products: Product[] = [
     name: 'Executive Ergonomic Office Chair',
     sku: 'EOS-CH-4091',
     price: '$499.00',
+    placement: 'floor',
     priceValue: 499.0,
     category: 'Executive Seating',
     description:
@@ -52,6 +54,7 @@ export const products: Product[] = [
     name: 'Desk Botanical Planter - Ceramic Base',
     sku: 'EOS-PL-1022',
     price: '$45.00',
+    placement: 'floor',
     priceValue: 45.0,
     category: 'Office Decor & Amenities',
     description:
@@ -83,6 +86,7 @@ export const products: Product[] = [
     price: '$120.00',
     priceValue: 120.0,
     category: 'Wall Systems & Acoustics',
+    placement: 'wall',
     description:
       'Commercial-grade acoustic timber panel designed for sound attenuation in conference rooms and private offices.',
     thumbnail: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.jpeg',

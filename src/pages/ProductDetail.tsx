@@ -129,6 +129,7 @@ export default function ProductDetail() {
                     ar
                     ar-modes="webxr scene-viewer quick-look"
                     ar-scale="auto"
+                    ar-placement={product.placement}
                     camera-controls
                     touch-action="pan-y"
                     shadow-intensity="1"
