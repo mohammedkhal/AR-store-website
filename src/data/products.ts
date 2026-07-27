@@ -94,8 +94,8 @@ export const products: Product[] = [
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.jpeg',
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2_detail1.jpeg',
     ],
-    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/new_design/public/assets/images/wall_panel_4.glb',
-    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/new_design/public/assets/images/wall-panel_4.usdz',
+    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/new_design/public/assets/images/wall_panel.glb',
+    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/new_design/public/assets/images/wall-panel.usdz',
     specs: [
       { label: 'Panel Dimensions', value: '94.5" W x 47.25" H x 1.5" D' },
       { label: 'Coverage Area', value: '31.0 sq. ft. per panel' },
