@@ -6,7 +6,6 @@ function resolveAssetUrl(url: string): string {
   return `${baseUrl}${url.replace(/^\/+/, '')}`;
 }
 
-sd 
 export interface Product {
   id: string;
   name: string;
