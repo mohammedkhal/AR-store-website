@@ -11,4 +11,22 @@
   .font-serif {
     font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   }
+  body {
+    background-color: #f8fafc; /* tailwind gray-50 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #0f172a; /* slate-900 */
+  }
+  a { color: #0ea5e9; } /* sky-500 */
+  button { font-family: inherit; }
+
+  model-viewer {
+    background-color: #f8fafc;
+  }
+  model-viewer::part(renderer) {
+    background-color: #f8fafc;
+  }
+  model-viewer::part(poster) {
+    background-color: #f8fafc;
+  }
 }

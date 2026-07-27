@@ -1,8 +1,17 @@
+const baseUrl = import.meta.env.BASE_URL;
+
+function resolveAssetUrl(url: string): string {
+  if (!url) return url;
+  if (/^(https?:)?\/\//i.test(url) || url.startsWith('data:')) return url;
+  return `${baseUrl}${url.replace(/^\/+/, '')}`;
+}
+
 export interface Product {
   id: string;
   name: string;
   sku: string;
   price: string;
+  placement: string;
   priceValue: number;
   category: string;
   description: string;
@@ -10,6 +19,8 @@ export interface Product {
   images?: string[];
   glbModel: string;
   usdzModel: string;
+  modelPosition?: string;
+  modelScale?: string;
   specs: {
     label: string;
     value: string;
@@ -22,6 +33,7 @@ export const products: Product[] = [
     name: 'Executive Ergonomic Office Chair',
     sku: 'EOS-CH-4091',
     price: '$499.00',
+    placement: 'floor',
     priceValue: 499.0,
     category: 'Executive Seating',
     description:
@@ -33,8 +45,10 @@ export const products: Product[] = [
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/chairs_side_1.png',
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/chair_side_2.png',
     ],
-    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/office_chair.glb',
-    usdzModel: '/models/gaming-chair.usdz',
+    glbModel: resolveAssetUrl('/assets/images/office_chair.glb'),
+    usdzModel: resolveAssetUrl('/assets/images/office_chair.usdz'),
+    modelPosition: '0 0 0',
+    modelScale: '0.95 0.95 0.95',
     specs: [
       { label: 'Overall Dimensions', value: '29.5" W x 30.5" D x 45.25" H' },
       { label: 'Seat Dimensions', value: '20.5" W x 19.75" D x 18.0" H' },
@@ -52,6 +66,7 @@ export const products: Product[] = [
     name: 'Desk Botanical Planter - Ceramic Base',
     sku: 'EOS-PL-1022',
     price: '$45.00',
+    placement: 'floor',
     priceValue: 45.0,
     category: 'Office Decor & Amenities',
     description:
@@ -62,8 +77,10 @@ export const products: Product[] = [
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
     ],
-    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/planrt.glb',
-    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/planrt.usdz',
+    glbModel: resolveAssetUrl('/assets/images/plant.glb'),
+    usdzModel: resolveAssetUrl('/assets/images/plant.usdz'),
+    modelPosition: '0 0 0.15',
+    modelScale: '1.1 1.1 1.1',
     specs: [
       { label: 'Vessel Dimensions', value: '6.0" dia. x 7.0" H' },
       { label: 'Overall Height (with foliage)', value: '14.0" H' },
@@ -83,6 +100,7 @@ export const products: Product[] = [
     price: '$120.00',
     priceValue: 120.0,
     category: 'Wall Systems & Acoustics',
+    placement: 'wall',
     description:
       'Commercial-grade acoustic timber panel designed for sound attenuation in conference rooms and private offices.',
     thumbnail: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.jpeg',
@@ -90,8 +108,10 @@ export const products: Product[] = [
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.jpeg',
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2_detail1.jpeg',
     ],
-    glbModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.glb',
-    usdzModel: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall-panel_2.usdz',
+    glbModel: resolveAssetUrl('/models/wall_panel.glb'),
+    usdzModel: resolveAssetUrl('/models/wall_panel.usdz'),
+    modelPosition: '0 0 0.05',
+    modelScale: '0.55 0.55 0.55',
     specs: [
       { label: 'Panel Dimensions', value: '94.5" W x 47.25" H x 1.5" D' },
       { label: 'Coverage Area', value: '31.0 sq. ft. per panel' },
