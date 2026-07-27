@@ -77,8 +77,8 @@ export const products: Product[] = [
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
       'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
     ],
-    glbModel: resolveAssetUrl('/assets/images/planrt.glb'),
-    usdzModel: resolveAssetUrl('/assets/images/planrt.usdz'),
+    glbModel: resolveAssetUrl('/assets/images/plant.glb'),
+    usdzModel: resolveAssetUrl('/assets/images/plant.usdz'),
     modelPosition: '0 0 0.15',
     modelScale: '1.1 1.1 1.1',
     specs: [
