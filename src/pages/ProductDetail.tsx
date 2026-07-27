@@ -133,7 +133,7 @@ export default function ProductDetail() {
                     ios-src={product.usdzModel}
                     ar
                     ar-modes="webxr scene-viewer quick-look"
-                    ar-scale="fixed"
+                    ar-scale="auto"
                     ar-placement={product.placement}
                     position={modelPosition}
                     scale={modelScale}
