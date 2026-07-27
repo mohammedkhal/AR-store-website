@@ -27,6 +27,8 @@ declare global {
         'touch-action'?: string;
         'shadow-intensity'?: string;
         'auto-rotate'?: boolean;
+        position?: string;
+        scale?: string;
       }, HTMLElement>;
     }
   }
@@ -73,6 +75,9 @@ export default function ProductDetail() {
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   }
+
+  const modelPosition = product.modelPosition ?? '0 0 0';
+  const modelScale = product.modelScale ?? '1 1 1';
 
   return (
     <div className="bg-zinc-50 min-h-screen relative pb-32">
@@ -128,8 +133,10 @@ export default function ProductDetail() {
                     ios-src={product.usdzModel}
                     ar
                     ar-modes="webxr scene-viewer quick-look"
-                    ar-scale="auto"
+                    ar-scale="fixed"
                     ar-placement={product.placement}
+                    position={modelPosition}
+                    scale={modelScale}
                     camera-controls
                     touch-action="pan-y"
                     shadow-intensity="1"
