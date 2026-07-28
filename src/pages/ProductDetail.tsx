@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getProductById } from '@/data/products';
 import { useCart } from '@/context/CartContext';
@@ -42,6 +42,8 @@ export default function ProductDetail() {
   const [tab, setTab] = useState<'photos' | 'spatial'>('photos');
   const [added, setAdded] = useState(false);
   const [mainImage, setMainImage] = useState<string>('');
+  const [showArGuide, setShowArGuide] = useState(false);
+  const modelViewerRef = useRef<HTMLElement | null>(null);
 
   if (!product) {
     return (
@@ -78,6 +80,23 @@ export default function ProductDetail() {
 
   const modelPosition = product.modelPosition ?? '0 0 0';
   const modelScale = product.modelScale ?? '1 1 1';
+
+  function handleLaunchAR() {
+    if (!product) return;
+
+    setTab('spatial');
+    setShowArGuide(true);
+
+    const mv = modelViewerRef.current as HTMLElement & {
+      activateAR?: () => void;
+    } | null;
+
+    if (mv && typeof mv.activateAR === 'function') {
+      mv.activateAR();
+    }
+
+    window.setTimeout(() => setShowArGuide(false), 4000);
+  }
 
   return (
     <div className="bg-zinc-50 min-h-screen relative pb-32">
@@ -121,44 +140,50 @@ export default function ProductDetail() {
 
             <div className="rounded-[2rem] overflow-hidden border border-zinc-200 bg-white shadow-[0_30px_80px_-40px_rgba(15,23,42,0.18)]">
               <div className="relative bg-zinc-950">
-                {tab === 'photos' ? (
-                  <img
-                    src={mainImage || product.thumbnail}
-                    alt={product.name}
-                    className="w-full h-[520px] object-cover"
-                  />
-                ) : (
-                  <model-viewer
-                    src={product.glbModel}
-                    ios-src={product.usdzModel}
-                    ar
-                    ar-modes="webxr scene-viewer quick-look"
-                    ar-scale="auto"
-                    ar-placement={product.placement}
-                    position={modelPosition}
-                    scale={modelScale}
-                    camera-controls
-                    touch-action="pan-y"
-                    shadow-intensity="1"
-                    auto-rotate
-                    className="w-full h-[520px] bg-zinc-100"
-                    style={{ width: '100%', height: '520px', backgroundColor: '#f8fafc' }}
-                  >
-                    <div slot="poster" className="w-full h-full flex items-center justify-center text-slate-400 text-sm">
-                      Loading spatial model…
+                {showArGuide && (
+                  <div className="absolute inset-0 z-10 flex items-start justify-center pt-4 pointer-events-none">
+                    <div className="mx-4 max-w-sm rounded-2xl border border-white/20 bg-slate-950/85 px-4 py-3 text-white shadow-xl backdrop-blur">
+                      <div style={{ fontFamily: 'Tahoma, Arial, sans-serif', direction: 'rtl', textAlign: 'center' }}>
+                        <div style={{ fontSize: '14px', fontWeight: 700 }}>استخدم الكاميرا لعرض المنتج بالواقع المعزز</div>
+                        <div style={{ marginTop: '4px', fontSize: '12px', lineHeight: 1.5 }}>
+                          افتح مساحة خالية، ثم حرّك الهاتف ببطء حتى يظهر المنتج أمامك
+                        </div>
+                      </div>
                     </div>
-                  </model-viewer>
+                  </div>
                 )}
+
+                <img
+                  src={mainImage || product.thumbnail}
+                  alt={product.name}
+                  className={`w-full h-[520px] object-cover ${tab !== 'photos' ? 'hidden' : ''}`}
+                />
+
+                <model-viewer
+                  ref={(element) => { modelViewerRef.current = element; }}
+                  src={product.glbModel}
+                  ar
+                  ar-modes="webxr scene-viewer quick-look"
+                  ar-scale="auto"
+                  ar-placement={product.placement}
+                  position={modelPosition}
+                  scale={modelScale}
+                  camera-controls
+                  touch-action="pan-y"
+                  shadow-intensity="1"
+                  auto-rotate
+                  className={`w-full h-[520px] bg-zinc-100 ${tab !== 'spatial' ? 'hidden' : ''}`}
+                  style={{ width: '100%', height: '520px', backgroundColor: '#f8fafc' }}
+                >
+                  <div slot="poster" className="w-full h-full flex items-center justify-center text-slate-400 text-sm">
+                    Loading spatial model…
+                  </div>
+                </model-viewer>
               </div>
 
               <div className="p-6 space-y-4">
                 <button
-                  onClick={() => {
-                    const mv = document.querySelector('model-viewer');
-                    if (mv && typeof (mv as any).activateAR === 'function') {
-                      (mv as any).activateAR();
-                    }
-                  }}
+                  onClick={handleLaunchAR}
                   className="w-full inline-flex items-center justify-center gap-3 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm px-6 py-4 transition-shadow shadow-sm"
                 >
                   <Smartphone className="w-5 h-5" /> Launch Augmented Reality Inspection
