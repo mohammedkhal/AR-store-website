@@ -80,6 +80,11 @@ export default function ProductDetail() {
 
   const modelPosition = product.modelPosition ?? '0 0 0';
   const modelScale = product.modelScale ?? '1 1 1';
+  const galleryImages = Array.from(
+    new Set((product.images && product.images.length ? product.images : [product.thumbnail]).filter(Boolean))
+  );
+  const previewImages = galleryImages.filter((img) => img !== (mainImage || galleryImages[0]));
+  const visiblePreviewImages = previewImages.slice(0, 3);
 
   function handleLaunchAR() {
     if (!product) return;
@@ -189,20 +194,22 @@ export default function ProductDetail() {
                   <Smartphone className="w-5 h-5" /> Launch Augmented Reality Inspection
                 </button>
 
-                <div className="grid grid-cols-3 gap-3">
-                  {(product.images && product.images.length ? product.images : [product.thumbnail]).slice(0, 3).map((img) => (
-                    <button
-                      key={img}
-                      onClick={() => {
-                        setTab('photos');
-                        setMainImage(img);
-                      }}
-                      className={`overflow-hidden rounded-3xl border transition ${mainImage === img ? 'border-sky-500 ring-2 ring-sky-200' : 'border-zinc-200 hover:border-slate-400'}`}
-                    >
-                      <img src={img} alt={product.name} className="w-full h-20 object-cover" />
-                    </button>
-                  ))}
-                </div>
+                {visiblePreviewImages.length > 0 && (
+                  <div className="grid grid-cols-3 gap-3">
+                    {visiblePreviewImages.map((img) => (
+                      <button
+                        key={img}
+                        onClick={() => {
+                          setTab('photos');
+                          setMainImage(img);
+                        }}
+                        className="overflow-hidden rounded-3xl border border-zinc-200 transition hover:border-slate-400"
+                      >
+                        <img src={img} alt={product.name} className="w-full h-20 object-cover" />
+                      </button>
+                    ))}
+                  </div>
+                )}
 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm text-slate-600">
                   <span className="text-slate-500">Want the full technical asset?</span>
