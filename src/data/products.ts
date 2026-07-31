@@ -18,7 +18,6 @@ export interface Product {
   thumbnail: string;
   images?: string[];
   glbModel: string;
-  usdzModel: string;
   modelPosition?: string;
   modelScale?: string;
   specs: {
@@ -32,21 +31,20 @@ export const products: Product[] = [
     id: 'gaming-chair',
     name: 'Executive Ergonomic Office Chair',
     sku: 'EOS-CH-4091',
-    price: '$499.00',
+    price: '﷼ 499.00',
     placement: 'floor',
     priceValue: 499.0,
     category: 'Executive Seating',
     description:
       'High-grade leather manager chair engineered for long-duration posture correction and lumbar support.',
     thumbnail:
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/office_chair.jpeg',
+      resolveAssetUrl('/assets/images/office_chair.jpeg'),
     images: [
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/office_chair.jpeg',
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/chairs_side_1.png',
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/chair_side_2.png',
+      resolveAssetUrl('/assets/images/office_chair.jpeg'),
+      resolveAssetUrl('/assets/images/chairs_side_1.png'),
+      resolveAssetUrl('/assets/images/chair_side_2.png'),
     ],
     glbModel: resolveAssetUrl('/assets/images/office_chair.glb'),
-    usdzModel: resolveAssetUrl('/assets/images/office_chair.usdz'),
     modelPosition: '0 0 0',
     modelScale: '0.95 0.95 0.95',
     specs: [
@@ -65,20 +63,19 @@ export const products: Product[] = [
     id: 'office-desk-plant',
     name: 'Desk Botanical Planter - Ceramic Base',
     sku: 'EOS-PL-1022',
-    price: '$45.00',
+    price: '﷼ 45.00',
     placement: 'floor',
     priceValue: 45.0,
     category: 'Office Decor & Amenities',
     description:
       'Low-maintenance indoor botanical specimen housed in a sealed matte-finish ceramic vessel.',
     thumbnail:
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
+      resolveAssetUrl('/assets/images/plant.jpeg'),
     images: [
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/plant.jpeg',
+      resolveAssetUrl('/assets/images/plant.jpeg'),
+      resolveAssetUrl('/assets/images/plant.jpeg'),
     ],
     glbModel: resolveAssetUrl('/assets/images/plant.glb'),
-    usdzModel: resolveAssetUrl('/assets/images/plant.usdz'),
     modelPosition: '0 0 0.15',
     modelScale: '1.1 1.1 1.1',
     specs: [
@@ -97,19 +94,18 @@ export const products: Product[] = [
     id: 'wall-panel',
     name: 'Acoustic Slat Architectural Wall Panel',
     sku: 'EOS-AP-8830',
-    price: '$120.00',
+    price: '﷼ 120.00',
     priceValue: 120.0,
     category: 'Wall Systems & Acoustics',
     placement: 'wall',
     description:
       'Commercial-grade acoustic timber panel designed for sound attenuation in conference rooms and private offices.',
-    thumbnail: 'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.jpeg',
+    thumbnail: resolveAssetUrl('/assets/images/books_stand.jpeg'),
     images: [
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2.jpeg',
-      'https://raw.githubusercontent.com/mohammedkhal/AR-store-website/main/public/assets/images/wall_panel_2_detail1.jpeg',
+      resolveAssetUrl('/assets/images/books_stand.jpeg'),
+      resolveAssetUrl('/assets/images/books_stand.jpeg'),
     ],
-    glbModel: resolveAssetUrl('/models/wall_panel.glb'),
-    usdzModel: resolveAssetUrl('/models/wall_panel.usdz'),
+    glbModel: resolveAssetUrl('/assets/images/books_stand.glb'),
     modelPosition: '0 0 0.05',
     modelScale: '0.55 0.55 0.55',
     specs: [
