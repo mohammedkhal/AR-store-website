@@ -226,7 +226,7 @@ export default function ProductDetail() {
               <div className="mt-8 grid gap-4 sm:grid-cols-[1fr_auto] items-start">
                 <div>
                   <p className="text-slate-900 text-4xl font-bold tracking-tight">{product.price}</p>
-                  <p className="text-sm text-slate-500 mt-1">$1,850.00 / UNIT</p>
+                  <p className="text-sm text-slate-500 mt-1">SAR 1,850.00 / UNIT</p>
                 </div>
                 <span className="inline-flex items-center rounded-full bg-emerald-50 text-emerald-700 px-4 py-2 text-sm font-semibold tracking-tight">
                   Ready to Ship
