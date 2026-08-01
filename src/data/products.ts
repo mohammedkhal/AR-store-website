@@ -102,9 +102,9 @@ export const products: Product[] = [
       'A modern sectional couch designed for comfort and style in contemporary office spaces.',
     thumbnail: resolveAssetUrl('/assets/images/couch_1.jpeg'),
     images: [
-      resolveAssetUrl('/assets/images/couch_1.jpeg'),
       resolveAssetUrl('/assets/images/couch_2.jpeg'),
       resolveAssetUrl('/assets/images/couch_3.jpeg'),
+      resolveAssetUrl('/assets/images/couch_4.jpeg'),
     ],
     glbModel: resolveAssetUrl('/assets/images/couch.glb'),
     modelPosition: '0 0 0.05',
